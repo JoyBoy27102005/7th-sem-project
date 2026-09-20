@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  :root {
+    --background: 45 36% 96%;
+    --foreground: 0 0% 11%;
+
+    --card: 45 36% 96%;
+    --card-foreground: 0 0% 11%;
+
+    --popover: 45 36% 96%;
+    --popover-foreground: 0 0% 11%;
+
+    --primary: 217 66% 12%;
+    --primary-foreground: 45 36% 96%;
+
+    --secondary: 43 89% 38%;
+    --secondary-foreground: 45 36% 96%;
+
+    --muted: 45 20% 90%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 43 89% 38%;
+    --accent-foreground: 45 36% 96%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 217 66% 12%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+  --background: 222 47% 7%;          /* #0F172A */
+  --foreground: 210 40% 98%;         /* Almost white */
+
+  --card: 222 47% 11%;               /* Slightly lighter than background */
+  --card-foreground: 210 40% 98%;
+
+  --popover: 222 47% 11%;
+  --popover-foreground: 210 40% 98%;
+
+  --primary: 221 83% 53%;            /* Blue */
+  --primary-foreground: 210 40% 98%;
+
+  --secondary: 215 28% 17%;
+  --secondary-foreground: 210 40% 98%;
+
+  --muted: 215 28% 17%;
+  --muted-foreground: 215 20% 72%;
+
+  --accent: 221 83% 53%;
+  --accent-foreground: 210 40% 98%;
+
+  --destructive: 0 63% 45%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 215 28% 20%;
+  --input: 215 28% 20%;
+  --ring: 221 83% 53%;
+}
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    line-height: 1.25;
+  }
+}
+
+/* Hide default browser password reveal button */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
